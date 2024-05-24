@@ -1,0 +1,43 @@
+@use "../utils/variables" as var;
+
+.dark .header,
+.dark .main,
+.dark .footer {
+    background-color: var.$dark-color !important;
+}
+
+.dark .header__title {
+    color: var.$white-color;
+}
+
+.dark .header__title,
+.dark .header__btn {
+    color: var.$white-color;
+}
+
+.dark .header__title {
+    text-shadow: 5px 5px 5px red;
+}
+
+.dark .action__card,
+.dark .articles__card {
+    border-radius: 12px 12px 0px 0px;
+    box-shadow: 0px 0px 15px 5px var.$white-color;
+}
+
+.dark .action__card img {
+    border-radius: 12px 12px 0px 0px;
+}
+
+.dark .action__card:hover {
+    box-shadow: 0px 0px 15px 5px var.$primary-color;
+}
+
+.dark .action__card__bottom {
+    background-color: var.$dark-color;
+}
+
+.dark .action__card__exam__title,
+.dark .action__card__title {
+    color: var.$white-color;
+}

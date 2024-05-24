@@ -1,0 +1,40 @@
+@use "../utils/variables" as var;
+
+.dark .header,
+.dark .main,
+.dark .footer {
+    background-color: var.$dark-color !important;
+}
+
+.dark .header__title {
+    color: var.$white-color;
+}
+
+.dark .header__tel {
+    color: red;
+}
+
+.dark .header__icon {
+    color: var.$secondary-color
+}
+
+.dark .header .dark .header__title,
+.dark .header__btn,
+.dark .header__text,
+.dark .shop__title,
+.dark .shop__exam__text,
+.dark .shop__exam__icon {
+    color: var.$white-color;
+}
+
+.dark .header__title {
+    text-shadow: 5px 5px 5px red;
+}
+
+.dark .shop__link {
+    box-shadow: 2px 2px 10px 5px var.$secondary-color;
+}
+
+.dark .active-tab {
+    box-shadow: 2px 2px 10px 5px var.$white-color;
+}

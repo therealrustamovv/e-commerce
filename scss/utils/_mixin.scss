@@ -1,0 +1,32 @@
+@use "../utils/variables" as var;
+
+@mixin btn(
+  $padding: 24px 64px,
+  $bg-color: var.$primary-color,
+  $color: var.$black-color,
+  $radius: 12px 12px 12px 12px
+) {
+  display: inline-block;
+  padding: $padding;
+  border-radius: $radius;
+  border: 0;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  background-color: $bg-color;
+  color: $color;
+  &:hover {
+    background-color: #f2c79b;
+    @content;
+  }
+}
+
+@mixin title($size, $height, $spacing: 0) {
+  font-size: $size + px;
+  font-weight: 700;
+  line-height: $height + px;
+  letter-spacing: $spacing + px;
+  text-transform: uppercase;
+}

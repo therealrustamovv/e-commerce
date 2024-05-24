@@ -1,0 +1,84 @@
+@use "../utils/variables" as var;
+
+.dark .header,
+.dark .main,
+.dark .footer {
+  background-color: var.$dark-color !important;
+}
+
+.dark .header__title {
+  color: var.$white-color;
+}
+
+.dark .header__title {
+  text-shadow: 5px 5px 5px red;
+}
+
+.dark .between {
+
+  &__title,
+  &__text,
+  &__icon {
+    color: var.$white-color;
+  }
+}
+
+.dark .action__card,
+.dark .articles__card {
+  border-radius: 12px 12px 0px 0px;
+  box-shadow: 0px 0px 15px 5px var.$white-color;
+}
+
+.dark .action__card img,
+.dark .articles__card img {
+  border-radius: 12px 12px 0px 0px;
+}
+
+.dark .action__card:hover,
+.dark .articles__card:hover {
+  box-shadow: 0px 0px 15px 5px var.$primary-color;
+}
+
+.dark .action__card__bottom,
+.dark .articles__bottom {
+  background-color: var.$dark-color;
+}
+
+.dark .action__card__exam__title,
+.dark .action__card__title {
+  color: var.$white-color;
+}
+
+.dark .cart__title,
+.dark .shop__title,
+.dark .articles__title,
+.dark .footer__link,
+.dark .footer__icon,
+.dark .footer__text {
+  color: var.$white-color;
+}
+
+.dark .footer__admin__text {
+  color: var.$primary-color;
+}
+
+.dark .user__list {
+  color: var.$white-color;
+}
+
+.dark #dropdown-menu {
+  background-color: rgba(238, 225, 225, 0.2) !important;
+  box-shadow: 0 4px 30px 2px rgba(240, 18, 18, 0.1) !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px) !important;
+  border: 1px solid rgba(216, 17, 17, 0.3) !important;
+  opacity: 1 !important;
+}
+
+.dark .user-info-container .dropdown-menu li a {
+  color: var.$white-color;
+
+  &:hover {
+    background-color: var.$secondary-color;
+  }
+}

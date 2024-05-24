@@ -1,0 +1,254 @@
+@use "../utils/variables" as var;
+@use "../utils/helpers";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: var.$white-color !important;
+  z-index: 10;
+  padding: 20px 0px;
+  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.10);
+  transition: all 500ms;
+
+  &__info {
+    @extend %flex-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__img {
+      max-width: 35px;
+    }
+
+    &__title {
+      font-family: "Rubik", sans-serif;
+      color: var.$text-color;
+      font-size: 20px;
+      font-weight: 800;
+
+      @media (max-width: 1130px) {
+        display: none;
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &__menu {
+      max-width: 140px;
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      gap: 10px;
+      border-radius: 4px;
+      background: var.$secondary-color;
+
+      @media (max-width: 1130px) {
+        max-width: 40px;
+      }
+
+      @media (max-width: 830px) {
+        display: none;
+      }
+    }
+
+    &__icon {
+      font-size: 24px;
+      color: var.$white-color;
+    }
+
+    &__title {
+      color: var.$white-color;
+      text-align: center;
+      font-family: "Rubik", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+
+      @media (max-width: 1130px) {
+        display: none;
+      }
+    }
+
+    &__exam {
+      position: relative;
+    }
+
+    &__input {
+      width: 360px;
+      height: 40px;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid var.$secondary-color;
+      background: var.$white-color;
+
+      @media (max-width: 460px) {
+        max-width: 261px;
+      }
+
+      @media (max-width: 340px) {
+        width: 100%;
+      }
+
+      &::placeholder {
+        color: #8f8f8f;
+        font-family: "Rubik", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+      }
+    }
+
+    &__search {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      font-size: 22px;
+      color: var.$text-color;
+    }
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    gap: 20px;
+
+    @media (max-width: 830px) {
+      display: none;
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+
+      &:hover .nav__center__icon {
+        color: var.$primary-color;
+        transform: translateY(-10px);
+      }
+
+      &:hover .nav__center__text {
+        transform: translateY(-10px);
+        background-color: var.$secondary-color;
+      }
+
+      &:hover .nav__center__title {
+        color: var.$primary-color;
+      }
+    }
+
+    &__icon {
+      font-size: 24px;
+      color: var.$text-color;
+      transition: all 500ms;
+    }
+
+    &__title {
+      color: var.$text-color;
+      text-align: center;
+      font-family: "Rubik", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+    }
+
+    &__shopping {
+      position: relative;
+    }
+
+    &__text {
+      position: absolute;
+      top: -12px;
+      right: 10px;
+      padding: 0px 4px;
+      border-radius: 4px;
+      background: var.$primary-color;
+      color: var.$white-color;
+      font-family: "Rubik", sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      transition: all 500ms;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: 830px) {
+      display: none;
+    }
+
+    &__box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &__img {
+      width: 40px;
+    }
+
+    &__title {
+      color: #232323;
+      font-family: "Rubik", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+
+      @media (max-width: 1130px) {
+        display: none;
+      }
+    }
+
+    &__icon {
+      font-size: 20px;
+      color: var.$text-color;
+
+      @media (max-width: 1130px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.dark .nav {
+  &__logo__title {
+    color: var.$white-color;
+  }
+
+  &__left__menu {
+    box-shadow: 0px 0px 10px 3px var.$secondary-color;
+  }
+
+  &__left__input {
+    box-shadow: 0px 0px 10px 3px var.$white-color;
+  }
+
+  &__center {
+
+    &__icon,
+    &__title {
+      color: var.$white-color;
+    }
+  }
+
+  &__right {
+
+    &__title,
+    &__icon {
+      color: var.$white-color;
+    }
+  }
+}

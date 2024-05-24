@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Delivering</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/css/intlTelInput.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:400,700" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="icon" href="../assets/images/logo.png" />
+    <link rel="stylesheet" href="../css/delivering.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/css/intlTelInput.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+</head>
+
+<body>
+    <!-- backtop start -->
+    <a id="backtop" href="#">
+        <i class="fa-solid fa-chevron-up top-icon"></i>
+    </a>
+    <!-- backtop end -->
+
+    <!-- loading start -->
+    <section id="loading">
+        <video src="../smoke.mp4" autoplay muted></video>
+        <h1 class="animation-title">
+            <span>R</span>
+            <span>U</span>
+            <span>$</span>
+            <span>T</span>
+            <span>A</span>
+            <span>M</span>
+            <span>O</span>
+            <span>V</span>
+            <span>V</span>
+        </h1>
+    </section>
+    <!-- loading end -->
+
+    <!-- mode btn start -->
+    <button id="mode-btn">
+        <img src="../assets/images/dark.svg" alt="dark" />
+    </button>
+    <!-- mode btn end -->
+
+    <!-- header start -->
+    <header class="header">
+        <!-- nav start -->
+        <nav id="navbar" class="nav">
+            <div class="container">
+                <div class="nav__info">
+                    <a href="../index.html" class="nav__logo">
+                        <img src="../assets/images/logo.png" alt="nav__logo__img" class="nav__logo__img" />
+                        <h2 class="nav__logo__title">СЕВЕРЯНОЧКА</h2>
+                    </a>
+                    <div class="nav__left">
+                        <div class="nav__left__menu">
+                            <i class="fa-solid fa-bars nav__left__icon"></i>
+                            <a href="./catalog.html" class="nav__left__title">Каталог</a>
+                        </div>
+                        <div class="nav__left__exam">
+                            <input id="search__product" type="text" placeholder="Найти товар"
+                                class="nav__left__input" />
+                            <button id="btnGiveCommand" class="nav__left__search"><i
+                                    class="fa-solid fa-microphone"></i></button>
+                            <div class="search_result"></div>
+                        </div>
+                    </div>
+                    <div class="nav__center">
+                        <a href="./favorites.html" class="nav__center__card nav__center__shopping">
+                            <i class="fa-regular fa-heart nav__center__icon"></i>
+                            <p class="nav__center__text cart-favourite"></p>
+                            <h2 class="nav__center__title">Избранное</h2>
+                        </a>
+                        <a href="./products.html" class="nav__center__card">
+                            <i class="fa-solid fa-cube nav__center__icon"></i>
+                            <h2 class="nav__center__title">продукты</h2>
+                        </a>
+                        <a href="./basket.html" class="nav__center__card nav__center__shopping">
+                            <i class="fa-solid fa-cart-shopping nav__center__icon"></i>
+                            <p class="nav__center__text cart-quantity"></p>
+                            <h2 class="nav__center__title">Корзина</h2>
+                        </a>
+                    </div>
+                    <a id="mobile-button" class="mobile-only " href="#"></a>
+                    <div class="nav__right">
+                        <a href="#" id="user-button" class="user">
+                            <div class="user__hover">
+                                <img width="45px" height="45px" id="profile-image" style="border-radius: 50%;"
+                                    src="../assets/images/user.jpg" alt="user" />
+                                <i class="fa-solid fa-camera camera"></i>
+                            </div>
+                            <p id="username" class="user_info nav__right__title">SIGN IN</p>
+                            <div class="user-info-container">
+                                <div class="user-info" id="user-info">
+                                    <i class="fa-solid fa-list-ul user__list dropdown-icon hidden"></i>
+                                    <ul class="dropdown-menu" id="dropdown-menu">
+                                        <li><a class="first" href="./dashboard.html"><svg width="20px"
+                                                    viewBox="0 0 24 24" fill="currentColor">
+                                                    <path
+                                                        d="M9.135 20.773v-3.057c0-.78.637-1.414 1.423-1.414h2.875c.377 0 .74.15 1.006.414.267.265.417.625.417 1v3.057c-.002.325.126.637.356.867.23.23.544.36.87.36h1.962a3.46 3.46 0 002.443-1 3.41 3.41 0 001.013-2.422V9.867c0-.735-.328-1.431-.895-1.902l-6.671-5.29a3.097 3.097 0 00-3.949.072L3.467 7.965A2.474 2.474 0 002.5 9.867v8.702C2.5 20.464 4.047 22 5.956 22h1.916c.68 0 1.231-.544 1.236-1.218l.027-.009z" />
+                                                </svg>Dashboard</a></li>
+                                        <input class="profile_picture" type="file" id="profile-image-input"
+                                            accept="image/*" />
+                                        <li><a id="logout" class="log-out" href="#"><svg width="20px"
+                                                    viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M8.8999 8.05999C9.2099 4.45999 11.0599 2.98999 15.1099 2.98999H15.2399C19.7099 2.98999 21.4999 4.77999 21.4999 9.24999V15.77C21.4999 20.24 19.7099 22.03 15.2399 22.03H15.1099C11.0899 22.03 9.2399 20.58 8.9099 17.04"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M15.0001 12.5H3.62012" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M5.85 9.14999L2.5 12.5L5.85 15.85" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg> Log Out</a></li>
+                                    </ul>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="header__info">
+                <a href="../index.html" class="header__btn">Главная</a>
+                <a href="../index.html" class="header__btn__icon">
+                    <i class="fa-solid fa-chevron-right header__btn__icon"></i>
+                </a>
+                <a href="#" class="header__you">О Корзина</a>
+            </div>
+        </div>
+        <!-- nav end -->
+    </header>
+    <!-- header end -->
+
+    <!-- modal start -->
+    <div id="modal" class="wrapper-modal">
+        <div class="modal">
+            <img onclick="closeModal()" class="img-close" src="../assets/images/closebutton.svg" alt="closebutton" />
+            <div class="modal-content">
+                <header>
+                    <img src="../assets/images/logo.png" alt="logo" />
+                    Северяночка
+                </header>
+                <div class="progress-bar">
+                    <div class="step">
+                        <p>Name</p>
+                        <div class="bullet">
+                            <span>1</span>
+                        </div>
+                        <div class="check fas fa-check"></div>
+                    </div>
+                    <div class="step">
+                        <p>Contact</p>
+                        <div class="bullet">
+                            <span>2</span>
+                        </div>
+                        <div class="check fas fa-check"></div>
+                    </div>
+                    <div class="step">
+                        <p>Birth</p>
+                        <div class="bullet">
+                            <span>3</span>
+                        </div>
+                        <div class="check fas fa-check"></div>
+                    </div>
+                    <div class="step">
+                        <p>Submit</p>
+                        <div class="bullet">
+                            <span>4</span>
+                        </div>
+                        <div class="check fas fa-check"></div>
+                    </div>
+                </div>
+                <div class="form-outer">
+                    <form action="#">
+                        <div class="page slide-page">
+                            <div class="title">Basic Info:</div>
+                            <div class="field">
+                                <div class="label">First Name</div>
+                                <input type="text" placeholder="First Name" required />
+                            </div>
+                            <div class="field">
+                                <div class="label">Last Name</div>
+                                <input type="text" placeholder="Last name" required />
+                            </div>
+                            <div class="field">
+                                <button class="firstNext next">Next</button>
+                            </div>
+                        </div>
+                        <div class="page">
+                            <div class="title">Contact Info:</div>
+                            <div class="field">
+                                <div class="label">Email Address</div>
+                                <input class="email" type="email" placeholder="Email address" required />
+                            </div>
+                            <div class="field">
+                                <div class="label">Phone Number</div>
+                                <input class="tel" type="tel" id="phone" required />
+                            </div>
+                            <div class="field btns">
+                                <button class="prev-1 prev">Previous</button>
+                                <button class="next-1 next">Next</button>
+                            </div>
+                        </div>
+                        <div class="page">
+                            <div class="title">Date of Birth:</div>
+                            <div class="field">
+                                <div class="label">Date</div>
+                                <input class="date" type="date" placeholder="03.03.2001" />
+                            </div>
+                            <div class="field">
+                                <div class="label">Gender</div>
+                                <select>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="field btns">
+                                <button class="prev-2 prev">Previous</button>
+                                <button class="next-2 next">Next</button>
+                            </div>
+                        </div>
+                        <div class="page">
+                            <div class="title">Login Details:</div>
+                            <div class="field">
+                                <div class="label">Username</div>
+                                <input class="username_important" type="text" placeholder="Username" required />
+                            </div>
+                            <form class="field">
+                                <div class="label__password">Password</div>
+                                <div class="form-group">
+                                    <input type="password" id="password" required />
+                                    <i class="bi bi-eye-slash" id="toggle-password"></i>
+                                </div>
+                            </form>
+                            <div class="field btns">
+                                <button class="prev-3 prev">Previous</button>
+                                <button class="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal end -->
+
+    <!-- dropdown start -->
+    <div class="dropdown" id="dropdown-content">
+        <div class="container">
+            <div class="dropdown__info"></div>
+        </div>
+    </div>
+    <!-- dropdown end -->
+
+    <!-- main start -->
+    <main class="main">
+        <section class="title">
+            <div class="container">
+                <div class="wrapper wrapper_cart">
+                    <h1>Доставка</h1>
+                    <span class="amout">0</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="delivering">
+            <div class="container">
+                <h2>Куда</h2>
+                <div class="main_wrapper">
+                    <div class="form_wrapper">
+                        <div class="user_location">
+                            <div>
+                                <label for="city">Населенный пункт:</label>
+                                <input type="text" placeholder="  Населенный пункт" required />
+                            </div>
+                            <div>
+                                <label for="street">Улица:</label>
+                                <input type="text" id="street" name="street" placeholder="  Улица" required />
+                            </div>
+                        </div>
+                        <div class="user_secondary_lcation">
+                            <div>
+                                <label for="house">Дом:</label>
+                                <input class="input_user-1" type="text" id="house" name="house" placeholder="  Дом"
+                                    required />
+                            </div>
+                            <div>
+                                <label for="apartment">Квартира:</label>
+                                <input class="input_user-2" type="text" id="apartment" name="apartment"
+                                    placeholder=" Квартира" required />
+                            </div>
+                            <div>
+                                <label for="additional">Дополнительно:</label>
+                                <input class="input_user-3" type="text" placeholder="  Дополнительно" />
+                            </div>
+                        </div>
+                        <div class="wrapper_title">
+                            <h1>Date</h1>
+                            <h1>Time</h1>
+                        </div>
+                        <div class="delivering_time">
+                            <div id="calendar"></div>
+                            <div id="timeSlots" class="time_wrapper">
+                                <div class="time">8 - 10</div>
+                                <div class="time">10 - 12</div>
+                                <div class="time">10 - 12</div>
+                                <div class="time">14 - 16</div>
+                                <div class="time">16 - 18</div>
+                                <div class="time">18 - 20</div>
+                            </div>
+                        </div>
+                        <div class="entering">
+                            <div class="entering_title">
+                                <h1>Вход</h1>
+                            </div>
+                            <div class="entering_wrapper">
+                                <input class="tel" type="tel" id="phone" placeholder="   Phone Number" />
+                                <button class="receving_code">Получить код</button>
+                                <a href="#">Войти по почте</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_info_right">
+                        <div class="product_note">
+                            <div class="choose">
+                                <span><input onclick="checkboxCart()" id="inpLock" type="checkbox" />
+                                    <label class="btn-lock" for="inpLock">
+                                        <svg width="50px" height="45px" viewBox="0 0 36 40">
+                                            <path class="lockb"
+                                                d="M27 27C27 34.1797 21.1797 40 14 40C6.8203 40 1 34.1797 1 27C1 19.8203 6.8203 14 14 14C21.1797 14 27 19.8203 27 27ZM15.6298 26.5191C16.4544 25.9845 17 25.056 17 24C17 22.3431 15.6569 21 14 21C12.3431 21 11 22.3431 11 24C11 25.056 11.5456 25.9845 12.3702 26.5191L11 32H17L15.6298 26.5191Z">
+                                            </path>
+                                            <path class="lock"
+                                                d="M6 21V10C6 5.58172 9.58172 2 14 2V2C18.4183 2 22 5.58172 22 10V21">
+                                            </path>
+                                            <path class="bling" d="M29 20L31 22"></path>
+                                            <path class="bling" d="M31.5 15H34.5"></path>
+                                            <path class="bling" d="M29 10L31 8"></path>
+                                        </svg>
+                                    </label>
+                                </span>
+                                Списать <span id="total-amout-1"></span> ₽
+                            </div>
+                            <p>На карте накоплено <span id="total-amout-2"></span> ₽</p>
+                        </div>
+
+                        <div class="cart__order">
+                            <div class="line"></div>
+
+                            <div class="wrapper_price">
+                                <p>
+                                    <span class="thenumber"><span class="whole-product">3</span>
+                                        товара</span><span>Скидка</span>
+                                </p>
+                                <p>
+                                    <span class="price">258,10 ₽ </span><span class="discount">-8,01 ₽ </span>
+                                </p>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="all_price">
+                                <span class="itog">Итог</span>
+                                <span class="price"><span id="total-amout"></span> ₽ </span>
+                            </div>
+                            <span class="bonus"><img src="../assets/images/shop-cart/circle-half.svg" alt="" />
+                                Вы получяете 100 бонусов</span>
+
+                            <div class="wrapper_booking">
+                                <button formaction="#" id="booking" class="booking btn" type="button">
+                                    Оформить заказ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main end -->
+
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__info">
+                <a href="../index.html" class="footer__logo">
+                    <img src="../assets/images/footer-logo.png" alt="footer__img" class="footer__img" />
+                </a>
+                <ul class="footer__menu">
+                    <li class="footer__item">
+                        <a href="./about.html" class="footer__link">О компании</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="./contacts.html" class="footer__link">Контакты</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="./vacancies.html" class="footer__link">Вакансии</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="./product.html" class="footer__link">Статьи</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="./categories.html" class="footer__link">Политика обработки персональных данных</a>
+                    </li>
+                </ul>
+                <div class="footer__right">
+                    <a href="#" class="footer__btn">
+                        <img src="../assets/images/instagram.png" alt="instagram" class="footer__btn__img" />
+                    </a>
+                    <a href="#" class="footer__btn">
+                        <img src="../assets/images/wk.png" alt="instagram" class="footer__btn__img" />
+                    </a>
+                    <a href="#" class="footer__btn">
+                        <img src="../assets/images/facebook.png" alt="instagram" class="footer__btn__img" />
+                    </a>
+                    <a href="#" class="footer__btn">
+                        <img src="../assets/images/ok.png" alt="instagram" class="footer__btn__img" />
+                    </a>
+                </div>
+                <a href="tel:+998887041980" class="footer__phone">
+                    <i class="fa-solid fa-phone footer__icon"></i>
+                    <p class="footer__text">998 88 704 19 80</p>
+                </a>
+            </div>
+            <div class="footer__admin">
+                <p class="footer__admin__text">Дизайн <strong>Ru$tamovv</strong></p>
+            </div>
+            <div class="footer__nav">
+                <div class="footer__nav__center">
+                    <div class="footer__nav__center__card">
+                        <i class="fa-solid fa-bars footer__nav__center__icon"></i>
+                        <h2 class="footer__nav__center__title">Каталог</h2>
+                    </div>
+                    <a href="./favorites.html" class="footer__nav__center__card footer__nav__center__shopping">
+                        <i class="fa-regular fa-heart footer__nav__center__icon"></i>
+                        <p class="footer__nav__center__text cart-favourite-mobile"></p>
+                        <h2 class="footer__nav__center__title">Избранное</h2>
+                    </a>
+                    <a href="./products.html" class="footer__nav__center__card">
+                        <i class="fa-solid fa-cube footer__nav__center__icon"></i>
+                        <h2 class="footer__nav__center__title">Заказы</h2>
+                    </a>
+                    <a href="./basket.html" class="footer__nav__center__card footer__nav__center__shopping">
+                        <i class="fa-solid fa-cart-shopping footer__nav__center__icon"></i>
+                        <p class="footer__nav__center__text cart-quantity-mobile"></p>
+                        <h2 class="footer__nav__center__title">Корзина</h2>
+                    </a>
+                    <div class="footer__nav__center__img">
+                        <img id="mobile-button" class="mobile-only" width="45px" height="45px"
+                            style="border-radius: 50%;" src="../assets/images/user.jpg" alt="user" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/js/intlTelInput.js"></script>
+    <script src="../js/categories-data.js"></script>
+    <script src="../js/products-data.js"></script>
+    <script src="../js/const.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/pages.js"></script>
+    <script src="../js/delivering.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+@use "../utils/variables" as var;
+
+.dark .header,
+.dark .main,
+.dark .footer {
+    background-color: var.$dark-color !important;
+}
+
+.dark .header__title,
+.dark .header__btn,
+.dark .header__icon {
+    color: var.$white-color;
+}
+
+.dark .header__title {
+    text-shadow: 5px 5px 5px red;
+}
+
+.dark .between {
+
+    &__title,
+    &__text,
+    &__icon {
+        color: var.$white-color;
+    }
+}

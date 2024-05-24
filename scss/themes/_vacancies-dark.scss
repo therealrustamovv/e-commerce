@@ -1,0 +1,37 @@
+@use "../utils/variables" as var;
+
+.dark .header,
+.dark .main,
+.dark .footer {
+    background-color: var.$dark-color !important;
+}
+
+.dark .word__title,
+.dark .header__title,
+.dark .header__btn,
+.dark .header__btn__icon,
+.dark .word__card__title,
+.dark .word__exam__h3 {
+    color: var.$white-color
+}
+
+.dark .word__title {
+    text-shadow: 5px 5px 5px red;
+}
+
+.dark .word__exam__text {
+    color: #948989;
+}
+
+.dark .word__exam__phone {
+    color: var.$primary-color;
+}
+
+.dark .word__card {
+    background-color: var.$dark-color;
+    box-shadow: 0px 0px 15px 3px var.$white-color;
+
+    &:hover {
+        box-shadow: 0px 0px 15px 3px var.$primary-color;
+    }
+}

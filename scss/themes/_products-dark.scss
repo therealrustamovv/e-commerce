@@ -1,0 +1,73 @@
+@use "../utils/variables" as var;
+
+.dark .header,
+.dark .main,
+.dark .footer {
+    background-color: var.$dark-color !important;
+}
+
+.dark .center__title {
+    color: var.$white-color
+}
+
+.dark .center__title {
+    text-shadow: 5px 5px 5px red;
+}
+
+.dark .price-sort {
+    background: var.$dark-color;
+    color: var.$white-color;
+    box-shadow: 0px 0px 8px 1px var.$white-color;
+}
+
+.dark .header__title,
+.dark .header__btn,
+.dark .broad__title,
+.dark .broad__top__text,
+.dark .broad__top__underline,
+.dark .broad__top__title,
+.dark .broad__top__icon,
+.dark .broad__right__title2,
+.dark .rev__title,
+.dark .rev__radius__text,
+.dark .rev__humans__icon,
+.dark .rev__humans__title,
+.dark .rev__ochen__title {
+    color: var.$white-color;
+}
+
+.dark .action__card,
+.dark .articles__card {
+    border-radius: 12px 12px 0px 0px;
+    box-shadow: 0px 0px 15px 5px var.$white-color;
+}
+
+.dark .action__card img {
+    border-radius: 12px 12px 0px 0px;
+}
+
+.dark .action__card:hover {
+    box-shadow: 0px 0px 15px 5px var.$primary-color;
+}
+
+.dark .action__card__bottom {
+    background-color: var.$dark-color;
+}
+
+.dark .action__card__exam__title,
+.dark .action__card__title {
+    color: var.$white-color;
+}
+
+.dark .broad__left__min {
+    box-shadow: 2px 2px 15px 3px var.$white-color
+}
+
+.dark .after__card {
+    background: var.$dark-color;
+    box-shadow: 0px 0px 8px 2px var.$white-color;
+}
+
+.dark .after__text {
+    color: var.$white-color;
+}

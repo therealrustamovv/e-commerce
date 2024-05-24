@@ -1,0 +1,57 @@
+@use "./mixin" as mxn;
+@use "./variables" as var;
+
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+%flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+%secondary-btn {
+  @include mxn.btn(24px 64px, var.$dark-color, var.$primary-color) {
+    color: var.$white-color;
+    background-color: var.$dark-color;
+  }
+}
+
+%title-1 {
+  @include mxn.title(64, 82, -0.64);
+}
+
+%title-2 {
+  @include mxn.title(48, 64, -0.48);
+}
+
+%title-3 {
+  @include mxn.title(40, 56, -0.48);
+}
+
+%title-4 {
+  @include mxn.title(32, 44, -0.32);
+}
+
+%title-5 {
+  @include mxn.title(24, normal, -0.24);
+}
+
+%title-6 {
+  @include mxn.title(16, normal);
+}
+
+%text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+%link {
+  font-size: 12px;
+  font-weight: 400;
+  color: var.$white-color;
+  text-transform: uppercase;
+}

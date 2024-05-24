@@ -1,0 +1,45 @@
+@use "../utils/variables" as var;
+
+.dark .header,
+.dark .main,
+.dark .footer {
+    background-color: var.$dark-color !important;
+}
+
+.dark .header__title,
+.dark .header__btn,
+.dark .header__icon {
+    color: var.$white-color;
+}
+
+.dark .wrapper h1 {
+    text-shadow: 5px 5px 5px red;
+    color: var.$white-color !important;
+}
+
+.dark .btn-lock {
+    box-shadow: 0px 0px 20px 5px #ff5b5b;
+}
+
+.dark #inpLock:checked+label {
+    box-shadow: 0px 0px 20px 5px #20cca5;
+}
+
+.dark label {
+    color: var.$white-color !important;
+}
+
+.dark #booking::before,
+.dark #booking::after {
+    background-color: var.$dark-color
+}
+
+.dark input {
+    box-shadow: 0px 0px 8px 2px var.$white-color !important;
+    background-color: var.$dark-color !important;
+    color: var.$white-color
+}
+
+.dark .price{
+    color: var.$white-color !important;
+}

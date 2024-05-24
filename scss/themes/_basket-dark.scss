@@ -1,0 +1,41 @@
+@use "../utils/variables" as var;
+
+.dark body,
+.dark .header,
+.dark .main,
+.dark .footer {
+    background-color: var.$dark-color !important;
+}
+
+.dark .header__title,
+.dark .header__btn,
+.dark .header__btn__icon,
+.dark .containerr p,
+.dark .choose,
+.dark .price,
+.dark .display_price {
+    color: var.$white-color !important;
+}
+
+.dark .header__title {
+    text-shadow: 5px 5px 5px red;
+}
+
+.dark .card_info_right .wrapper_booking button::after,
+.dark .card_info_right .wrapper_booking button::before {
+    background-color: var.$dark-color
+}
+
+.dark .product {
+    background-color: var.$dark-color;
+    box-shadow: 8px 4px 20px 0px var.$white-color;
+    transition: all 500ms;
+}
+
+.dark .product:hover {
+    box-shadow: 6px 4px 20px 0px var.$primary-color;
+}
+
+.dark .header__title {
+    text-shadow: 5px 5px 8px red;
+}

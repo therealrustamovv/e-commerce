@@ -1,0 +1,34 @@
+@use "../utils/variables" as var;
+
+.dark .header,
+.dark .main,
+.dark .footer {
+    background-color: var.$dark-color !important;
+}
+
+.dark .catolog__title,
+.dark .header__btn,
+.dark .header__icon {
+    color: var.$white-color;
+}
+
+.dark .catolog__title {
+    text-shadow: 5px 5px 5px red;
+}
+
+.dark .catolog__min {
+    box-shadow: 4px 0px 10px 5px var.$secondary-color;
+
+    &:hover {
+        box-shadow: 4px 0px 10px 5px var.$primary-color;
+    }
+}
+
+.dark .catolog__img {
+    z-index: 1;
+}
+
+.dark .catolog__text {
+    z-index: 2;
+    top: 20px;
+}

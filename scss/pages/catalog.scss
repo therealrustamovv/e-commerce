@@ -1,0 +1,210 @@
+@use "../global";
+@use "../utils/variables" as var;
+@use "../themes/catalog-dark";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background: #fbf8ec;
+}
+
+// header start
+.header {
+  &__info {
+    padding: 110px 0px 30px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__btn {
+    color: var.$text-color;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%;
+    transition: all 500ms;
+
+    &:hover {
+      font-size: 14px;
+    }
+
+    &__icon {
+      font-size: 20px;
+      color: var.$text-color;
+      transition: all 500ms;
+
+      &:hover {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+
+  &__you {
+    color: #8f8f8f;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%;
+    transition: all 500ms;
+
+    &:hover {
+      font-size: 14px;
+    }
+  }
+}
+
+// main start
+.main {
+  padding-bottom: 80px;
+}
+
+// catolog start
+.catolog {
+  &__title {
+    color: var.$text-color;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 150%;
+    padding-bottom: 60px;
+
+    @media (max-width: 768px) {
+      font-size: 48px;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 36px;
+    }
+  }
+
+  &__img {
+    transition: all 500ms;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    @media (max-width: 768px) {
+      gap: 30px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    @media (max-width: 768px) {
+      gap: 30px;
+    }
+  }
+
+  &__max {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: flex-end;
+    position: relative;
+    width: 584px;
+    height: 200px;
+    border-radius: 6px;
+    background: linear-gradient(180deg,
+        rgba(112, 192, 91, 0) 0%,
+        #70c05b 82.81%);
+    transition: all 500ms;
+
+    &:hover {
+      background: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #f63 100%);
+    }
+
+    @media (max-width: 768px) {
+      width: 478px;
+      height: 140px;
+    }
+
+    @media (max-width: 520px) {
+      width: 100%;
+    }
+  }
+
+  &__min {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+    width: 272px;
+    height: 200px;
+    border-radius: 6px;
+    background: linear-gradient(180deg,
+        rgba(112, 192, 91, 0) 0%,
+        #70c05b 82.81%);
+    transition: all 500ms;
+
+    &:hover {
+      background: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #f63 100%);
+    }
+
+    &:hover .catolog__img {
+      width: 120%;
+      height: 120%;
+    }
+
+    @media (max-width: 768px) {
+      width: 224px;
+      height: 140px;
+    }
+
+    @media (max-width: 520px) {
+      width: 150px;
+      height: 140px;
+    }
+
+    @media (max-width: 400px) {
+      width: 120px;
+    }
+  }
+
+  &__name {
+    @media (max-width: 768px) {
+      width: 224px;
+      height: 140px;
+    }
+
+    @media (max-width: 520px) {
+      width: 100%;
+    }
+
+    order: -1;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 6px;
+    z-index: -1;
+    transition: all 500ms;
+  }
+
+  &__text {
+    padding: 10px;
+    color: var.$white-color;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+  }
+}
